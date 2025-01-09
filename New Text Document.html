@@ -1,3 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Video Editor Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #cccccc;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .skills h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .skill-card {
+            background: #f8f8f8;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 60px 0;
+            background: #f5f5f5;
+        }
+
+        .portfolio h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .portfolio-item-content {
+            padding: 20px;
+        }
+
+        .portfolio-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 40px 0;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
 <body>
-<h1>Marwan the dev first test</h1>
+    <!-- Hero Section -->
+    <header>
+        <div class="container">
+            <img src="/api/placeholder/150/150" alt="Profile Photo" class="profile-img">
+            <h1>John Smith</h1>
+            <p class="title">Professional Video Editor</p>
+            <p class="bio">Creative video editor with 5+ years of experience in producing compelling visual content.
+                Specialized in commercial, documentary, and social media content.</p>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Software Proficiency</h3>
+                    <ul>
+                        <li>Adobe Premiere Pro</li>
+                        <li>Final Cut Pro X</li>
+                        <li>DaVinci Resolve</li>
+                        <li>Adobe After Effects</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Specialties</h3>
+                    <ul>
+                        <li>Color Grading</li>
+                        <li>Motion Graphics</li>
+                        <li>Sound Design</li>
+                        <li>Visual Effects</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Additional Skills</h3>
+                    <ul>
+                        <li>Project Management</li>
+                        <li>Client Communication</li>
+                        <li>Storyboarding</li>
+                        <li>Team Collaboration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <h2>Featured Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/600/400" alt="Project 1">
+                    <div class="portfolio-item-content">
+                        <h3>Commercial: Tech Brand Launch</h3>
+                        <p>60-second promotional video for a major tech company's product launch. Combined motion graphics with live footage.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/600/400" alt="Project 2">
+                    <div class="portfolio-item-content">
+                        <h3>Documentary: Urban Wildlife</h3>
+                        <p>30-minute documentary exploring urban wildlife. Winner of Best Editing at Local Film Festival 2023.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>Email: john.smith@example.com</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Location: New York City, NY</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 John Smith. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+</html>

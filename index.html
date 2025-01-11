@@ -3,275 +3,531 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Video Editor Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            color: #cccccc;
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Skills Section */
-        .skills {
-            background: white;
-            padding: 60px 0;
-        }
-
-        .skills h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 20px;
-        }
-
-        .skill-card {
-            background: #f8f8f8;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .skill-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .skill-card ul {
-            list-style: none;
-        }
-
-        .skill-card li {
-            margin-bottom: 10px;
-            color: #666;
-        }
-
-        /* Portfolio Section */
-        .portfolio {
-            padding: 60px 0;
-            background: #f5f5f5;
-        }
-
-        .portfolio h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-            padding: 20px;
-        }
-
-        .portfolio-item {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .portfolio-item-content {
-            padding: 20px;
-        }
-
-        .portfolio-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
-
-        .contact-info {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .contact-info p {
-            margin-bottom: 15px;
-            color: #666;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .skills-grid,
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            header {
-                padding: 40px 0;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 0 15px;
-            }
-        }
-    </style>
+    <title>MaroDev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
-<body>
-    <!-- Hero Section -->
-    <header>
-        <div class="container">
-            <img src="/api/placeholder/150/150" alt="Profile Photo" class="profile-img">
-            <h1>John Smith</h1>
-            <p class="title">Professional Video Editor</p>
-            <p class="bio">Creative video editor with 5+ years of experience in producing compelling visual content.
-                Specialized in commercial, documentary, and social media content.</p>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-lg z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    MaroDev
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Home</a>
+                    <a href="#work" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Featured Projects</a>
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Services</a>
+                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Technical Skills</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Skills Section -->
-    <section class="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Software Proficiency</h3>
-                    <ul>
-                        <li>Adobe Premiere Pro</li>
-                        <li>Final Cut Pro X</li>
-                        <li>DaVinci Resolve</li>
-                        <li>Adobe After Effects</li>
+
+
+
+
+
+<!-- Hero Section -->
+<section id="home" class="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col items-center justify-center text-center max-w-3xl mx-auto" data-aos="fade-up">
+            <h1 class="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Turning Vision Into Reality
+            </h1>
+            <p class="text-gray-600 text-xl leading-relaxed mb-8">
+                Professional video editor with a passion for storytelling and visual excellence. 
+                Specializing in commercial, wedding, and creative content editing.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:opacity-90 transition-opacity duration-300 shadow-lg">
+                    Contact Me
+                </a>
+                <a href="#work" class="px-8 py-4 rounded-lg transition-all duration-300 bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white border-2 border-blue-600">
+                    View my latest Projects
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Work Section -->
+    <section id="work" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Showcasing some of my Latest Projects.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Project 1 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-xl shadow-2xl bg-white">
+                        <!-- Video Thumbnail -->
+                        <div class="relative">
+                            <img src="Project1.png" alt="Project1" 
+                                 class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+                            <!-- Overlay with Play Button -->
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <a href="https://youtube.com/watch?v=example1" target="_blank" 
+                                   class="bg-red-600 text-white p-4 rounded-full transform hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Cinematic Fast-Paced Style</h3>
+                            <p class="text-gray-600 mb-4">A Short Example of a long Youtube Video with Cinematic View.</p>
+                            <!-- Software Used -->
+                            <div class="mb-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">NodeVideo</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Alight Motion</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">CapCut</span>
+                                </div>
+                            </div>
+                            <!-- View Project Link -->
+                            <a href="https://youtube.com/watch?v=example1" target="_blank" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                                View Project
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!-- Project 2 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-xl shadow-2xl bg-white">
+                        <!-- Video Thumbnail -->
+                        <div class="relative">
+                            <img src="Project2.png" alt="Project2" 
+                                 class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+                            <!-- Overlay with Play Button -->
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <a href="https://youtube.com/watch?v=example2" target="_blank" 
+                                   class="bg-red-600 text-white p-4 rounded-full transform hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Real Estate Style</h3>
+                            <p class="text-gray-600 mb-4">A short Video made specefically for a Real Estate Marketing Company called "Makana".</p>
+                            <!-- Software Used -->
+                            <div class="mb-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Alight Motion</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Adobe Illustrator</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Ai for Voice Over</span>
+                                </div>
+                            </div>
+                            <!-- View Project Link -->
+                            <a href="https://youtube.com/watch?v=example2" target="_blank" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                                View Project
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-xl shadow-2xl bg-white">
+                        <!-- Video Thumbnail -->
+                        <div class="relative">
+                            <img src="/api/placeholder/400/300" alt="Project3" 
+                                 class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+                            <!-- Overlay with Play Button -->
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <a href="https://youtube.com/watch?v=example3" target="_blank" 
+                                   class="bg-red-600 text-white p-4 rounded-full transform hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Reel/Short Example</h3>
+                            <p class="text-gray-600 mb-4">Professonial Reel Editing I made for a Content Creator Showcasing Medical stuff.</p>
+                            <!-- Software Used -->
+                            <div class="mb-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">CapCut</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">Alight Motion</span>
+                                </div>
+                            </div>
+                            <!-- View Project Link -->
+                            <a href="https://youtube.com/watch?v=example3" target="_blank" 
+                               class="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                                View Project
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section id="services" class="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Services</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Expert video editing and web development solutions</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Professional Video Editing -->
+                <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300"
+                     data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Professional Video Editing</h3>
+                    <p class="text-gray-300 mb-4">Expert editing with attention to detail, pacing, and storytelling elements.</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <span class="mr-2">•</span>
+                            Color Correction
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">•</span>
+                            Smooth Transitions
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">•</span>
+                            Captions
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">•</span>
+                            Visual Effects
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">•</span>
+                            Sound Effects
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">•</span>
+                            Chroma Key
+                        </li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <h3>Specialties</h3>
-                    <ul>
-                        <li>Color Grading</li>
-                        <li>Motion Graphics</li>
-                        <li>Sound Design</li>
-                        <li>Visual Effects</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Additional Skills</h3>
-                    <ul>
-                        <li>Project Management</li>
-                        <li>Client Communication</li>
-                        <li>Storyboarding</li>
-                        <li>Team Collaboration</li>
+                <!-- Web Development -->
+                <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:transform hover:-translate-y-2 transition-all duration-300"
+                     data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-500 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                    <p class="text-gray-300 mb-4">Front-end web development with the latest technologies.</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <span class="mr-2">•</span>
+                            HTML
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">•</span>
+                            CSS
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">•</span>
+                            JavaScript
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">•</span>
+                            React.js
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">•</span>
+                            TailwindCSS
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio">
-        <div class="container">
-            <h2>Featured Work</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="/api/placeholder/600/400" alt="Project 1">
-                    <div class="portfolio-item-content">
-                        <h3>Commercial: Tech Brand Launch</h3>
-                        <p>60-second promotional video for a major tech company's product launch. Combined motion graphics with live footage.</p>
+
+
+
+
+
+<!-- Experience Section -->
+<section id="experience" class="py-20">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-4">Technical Skills</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive technical expertise in web development</p>
+        </div>
+        
+        <!-- Combined Skills Card -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-16" data-aos="fade-up">
+            <div class="p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- HTML & CSS -->
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-xl">HTML & CSS</h3>
+                        <p class="text-gray-600">Advanced proficiency in creating responsive and modern web layouts</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">HTML5</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">CSS3</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Responsive</span>
+                        </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="/api/placeholder/600/400" alt="Project 2">
-                    <div class="portfolio-item-content">
-                        <h3>Documentary: Urban Wildlife</h3>
-                        <p>30-minute documentary exploring urban wildlife. Winner of Best Editing at Local Film Festival 2023.</p>
+
+                    <!-- JavaScript & React -->
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-xl">JavaScript & React</h3>
+                        <p class="text-gray-600">Experience in building interactive and dynamic web applications</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Redux</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">TypeScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-xl">Python</h3>
+                        <p class="text-gray-600">Proficient in automation and backend development with Python</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Python 3</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Certificate Section -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden" data-aos="fade-up">
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-20"></div>
+                <img src="/api/placeholder/1200/400" alt="Web Development Certificate" class="w-full h-96 object-cover"/>
+            </div>
+            <div class="p-8 text-center">
+                <h3 class="text-2xl font-bold mb-4">Front-End Web Development Certificate</h3>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Completed 280 Hours of Training in Creativa Company.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p>Email: john.smith@example.com</p>
-                <p>Phone: (555) 123-4567</p>
-                <p>Location: New York City, NY</p>
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ready to start your next project? Contact me through any of these platforms</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- WhatsApp -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                     data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">WhatsApp</h3>
+                    <p class="text-gray-600 text-center mb-4">Available for quick chat and fast response</p>
+                    <a href="https://wa.me/1234567890" class="block text-center text-green-500 hover:text-green-600 font-medium">
+                        +201099763442
+                    </a>
+                </div>
+                <!-- Email -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                     data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Email</h3>
+                    <p class="text-gray-600 text-center mb-4">For detailed project discussions</p>
+                    <a href="mailto:contact@example.com" class="block text-center text-blue-500 hover:text-blue-600 font-medium">
+                        JustMarwanFr@gmail.com
+                    </a>
+                </div>
+                <!-- Mostaql -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                     data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Mostaql.com</h3>
+                    <p class="text-gray-600 text-center mb-4">View my Freelance Portfolio</p>
+                    <a href="#" class="block text-center text-purple-500 hover:text-purple-600 font-medium">
+                        View Profile
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 John Smith. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <h4 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        MaroDev
+                    </h4>
+                    <p class="text-gray-400">
+                        Professional video editing services for all your creative needs.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#work" class="text-gray-400 hover:text-white transition-colors">Work</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Video Editing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">WhatsApp</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Email</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Mostaql.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 MaroDev Portfolio. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>

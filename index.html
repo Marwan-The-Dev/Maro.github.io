@@ -10,28 +10,44 @@
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-gray-100">
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-lg z-50 transition-all duration-300">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    MaroDev
-                </a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Home</a>
-                    <a href="#work" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Featured Projects</a>
-                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Services</a>
-                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Technical Skills</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
-                </div>
-                <!-- Mobile menu button -->
-                <button class="md:hidden p-2 rounded-lg hover:bg-gray-100">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
-                    </svg>
-                </button>
+<nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-lg z-50 transition-all duration-300">
+    <div class="container mx-auto px-6">
+        <div class="relative flex items-center justify-between h-20">
+            <!-- Logo -->
+            <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+                MaroDev
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-1">
+                <a href="#home" class="px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300">Home</a>
+                <a href="#work" class="px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300">Featured Projects</a>
+                <a href="#services" class="px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300">Services</a>
+                <a href="#experience" class="px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300">Technical Skills</a>
+                <a href="#contact" class="ml-2 px-6 py-2 text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-lg">Contact Me</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" 
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white rounded-lg shadow-lg mt-2">
+                <a href="#home" class="block px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300">Home</a>
+                <a href="#work" class="block px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300">Featured Projects</a>
+                <a href="#services" class="block px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300">Services</a>
+                <a href="#experience" class="block px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300">Technical Skills</a>
+                <a href="#contact" class="block px-4 py-3 text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:opacity-90 transition-all duration-300">Contact Me</a>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
 
 
@@ -46,19 +62,44 @@
                 Turning Vision Into Reality
             </h1>
             <p class="text-gray-600 text-xl leading-relaxed mb-8">
-                Professional video editor with a passion for storytelling and visual excellence. 
-                Specializing in commercial, wedding, and creative content editing.
+                Professional video editor and Front-End Web Develper.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#contact" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:opacity-90 transition-opacity duration-300 shadow-lg">
                     Contact Me
                 </a>
                 <a href="#work" class="px-8 py-4 rounded-lg transition-all duration-300 bg-transparent hover:bg-blue-600 text-blue-600 hover:text-white border-2 border-blue-600">
-                    View my latest Projects
+                    View my Featured Projects
                 </a>
             </div>
         </div>
     </div>
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div class="flex flex-col items-center cursor-pointer" onclick="window.scrollTo({top: window.innerHeight, behavior: 'smooth'})">
+        <span class="text-gray-600 text-sm mb-2">Scroll Down</span>
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+</div>
+
+<style>
+@keyframes pulse-shadow {
+    0% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate-bounce {
+    animation: pulse-shadow 2s infinite;
+}
+</style>
 </section>
 
 
@@ -86,10 +127,10 @@
                         <!-- Video Thumbnail -->
                         <div class="relative">
                             <img src="Project1.png" alt="Project1" 
-                                 class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+                                 class="w-full h-64 object-cover transform"/>
                             <!-- Overlay with Play Button -->
                             <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <a href="https://youtube.com/watch?v=example1" target="_blank" 
+                                <a href="https://youtu.be/7mtpPJ3bdE0?si=toH7d9cTFDfOLWUK" target="_blank" 
                                    class="bg-red-600 text-white p-4 rounded-full transform hover:scale-110 transition-transform duration-300">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
@@ -101,7 +142,7 @@
                         <!-- Content -->
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Cinematic Fast-Paced Style</h3>
-                            <p class="text-gray-600 mb-4">A Short Example of a long Youtube Video with Cinematic View.</p>
+                            <p class="text-gray-600 mb-4">cinematic montage showcasing advanced editing techniques, seamless transitions, and captivating visual storytelling made for a Youtube Channel called "7add".</p>
                             <!-- Software Used -->
                             <div class="mb-4">
                                 <div class="flex flex-wrap gap-2">
@@ -111,7 +152,7 @@
                                 </div>
                             </div>
                             <!-- View Project Link -->
-                            <a href="https://youtube.com/watch?v=example1" target="_blank" 
+                            <a href="https://youtu.be/7mtpPJ3bdE0?si=toH7d9cTFDfOLWUK" target="_blank" 
                                class="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-300">
                                 View Project
                                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -133,10 +174,10 @@
                         <!-- Video Thumbnail -->
                         <div class="relative">
                             <img src="Project2.png" alt="Project2" 
-                                 class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+                                 class="w-full h-64 object-cover transform"/>
                             <!-- Overlay with Play Button -->
                             <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <a href="https://youtube.com/watch?v=example2" target="_blank" 
+                                <a href="https://drive.google.com/file/d/1NhEC4Z_ftiJnQRYmo_EHX9Rp7xdWOKG7/view?usp=drivesdk" target="_blank" 
                                    class="bg-red-600 text-white p-4 rounded-full transform hover:scale-110 transition-transform duration-300">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
@@ -148,7 +189,7 @@
                         <!-- Content -->
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Real Estate Style</h3>
-                            <p class="text-gray-600 mb-4">A short Video made specefically for a Real Estate Marketing Company called "Makana".</p>
+                            <p class="text-gray-600 mb-4">Custom-crafted promotional video for a Marekting Real Estate Company called "Makana".</p>
                             <!-- Software Used -->
                             <div class="mb-4">
                                 <div class="flex flex-wrap gap-2">
@@ -158,7 +199,7 @@
                                 </div>
                             </div>
                             <!-- View Project Link -->
-                            <a href="https://youtube.com/watch?v=example2" target="_blank" 
+                            <a href="https://drive.google.com/file/d/1NhEC4Z_ftiJnQRYmo_EHX9Rp7xdWOKG7/view?usp=drivesdk" target="_blank" 
                                class="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-300">
                                 View Project
                                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -174,11 +215,11 @@
                     <div class="relative overflow-hidden rounded-xl shadow-2xl bg-white">
                         <!-- Video Thumbnail -->
                         <div class="relative">
-                            <img src="/api/placeholder/400/300" alt="Project3" 
-                                 class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"/>
+                            <img src="Project3.png" alt="Project3" 
+                                 class="w-full h-64 object-cover transform"/>
                             <!-- Overlay with Play Button -->
                             <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <a href="https://youtube.com/watch?v=example3" target="_blank" 
+                                <a href="https://youtu.be/lR0aCow9Sew?si=04MVIQ2aahAw3uFg" target="_blank" 
                                    class="bg-red-600 text-white p-4 rounded-full transform hover:scale-110 transition-transform duration-300">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
@@ -190,7 +231,7 @@
                         <!-- Content -->
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Reel/Short Example</h3>
-                            <p class="text-gray-600 mb-4">Professonial Reel Editing I made for a Content Creator Showcasing Medical stuff.</p>
+                            <p class="text-gray-600 mb-4">Professonial Reel/Tiktok/Short Editing optimized for maximum engagement on short-form platforms like Instagram and TikTok.</p>
                             <!-- Software Used -->
                             <div class="mb-4">
                                 <div class="flex flex-wrap gap-2">
@@ -199,7 +240,7 @@
                                 </div>
                             </div>
                             <!-- View Project Link -->
-                            <a href="https://youtube.com/watch?v=example3" target="_blank" 
+                            <a href="https://youtu.be/lR0aCow9Sew?si=04MVIQ2aahAw3uFg" target="_blank" 
                                class="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-300">
                                 View Project
                                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -372,12 +413,11 @@
                 </div>
             </div>
         </div>
-
         <!-- Certificate Section -->
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden" data-aos="fade-up">
             <div class="relative">
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-20"></div>
-                <img src="/api/placeholder/1200/400" alt="Web Development Certificate" class="w-full h-96 object-cover"/>
+                <img src="React.jpg" alt="Web Development Certificate" class="w-full h-full object-cover"/>
             </div>
             <div class="p-8 text-center">
                 <h3 class="text-2xl font-bold mb-4">Front-End Web Development Certificate</h3>
@@ -404,63 +444,69 @@
 
 
 
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Ready to start your next project? Contact me through any of these platforms</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- WhatsApp -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
-                     data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-center mb-4">WhatsApp</h3>
-                    <p class="text-gray-600 text-center mb-4">Available for quick chat and fast response</p>
-                    <a href="https://wa.me/1234567890" class="block text-center text-green-500 hover:text-green-600 font-medium">
-                        +201099763442
-                    </a>
-                </div>
-                <!-- Email -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
-                     data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-center mb-4">Email</h3>
-                    <p class="text-gray-600 text-center mb-4">For detailed project discussions</p>
-                    <a href="mailto:contact@example.com" class="block text-center text-blue-500 hover:text-blue-600 font-medium">
-                        JustMarwanFr@gmail.com
-                    </a>
-                </div>
-                <!-- Mostaql -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
-                     data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-center mb-4">Mostaql.com</h3>
-                    <p class="text-gray-600 text-center mb-4">View my Freelance Portfolio</p>
-                    <a href="#" class="block text-center text-purple-500 hover:text-purple-600 font-medium">
-                        View Profile
-                    </a>
-                </div>
-            </div>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Ready to start your next project? Contact me through any of these platforms</p>
         </div>
-    </section>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/qr/42KIYM425DOYE1" 
+               class="group bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+               data-aos="fade-up" 
+               data-aos-delay="100">
+                <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-4 text-gray-800 group-hover:text-green-600 transition-colors duration-300">WhatsApp</h3>
+                <p class="text-gray-600 text-center mb-4">Available for quick chat and fast response</p>
+                <div class="text-center text-green-500 group-hover:text-green-600 font-medium">
+                    +201099763442
+                </div>
+            </a>
 
+            <!-- Email -->
+            <a href="mailto:JustMarwanFr@gmail.com" 
+               class="group bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+               data-aos="fade-up" 
+               data-aos-delay="200">
+                <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-4 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Email</h3>
+                <p class="text-gray-600 text-center mb-4">For detailed project discussions</p>
+                <div class="text-center text-blue-500 group-hover:text-blue-600 font-medium">
+                    JustMarwanFr@gmail.com
+                </div>
+            </a>
+
+            <!-- Mostaql -->
+            <a href="https://mostaql.com/u/Marwan_PBL" 
+               class="group bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+               data-aos="fade-up" 
+               data-aos-delay="300">
+                <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-4 text-gray-800 group-hover:text-purple-600 transition-colors duration-300">Mostaql.com</h3>
+                <p class="text-gray-600 text-center mb-4">View my Freelance Portfolio</p>
+                <div class="text-center text-purple-500 group-hover:text-purple-600 font-medium">
+                    View Profile
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
 
 
 
@@ -488,7 +534,7 @@
                         MaroDev
                     </h4>
                     <p class="text-gray-400">
-                        Professional video editing services for all your creative needs.
+                        Professional video editing and Web Development services for all your creative needs.
                     </p>
                 </div>
                 <div>
@@ -497,21 +543,23 @@
                         <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
                         <li><a href="#work" class="text-gray-400 hover:text-white transition-colors">Work</a></li>
                         <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+			<li><a href="#experience" class="text-gray-400 hover:text-white transition-colors">Technical Skills</a></li>
+			<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact Me</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Services</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Video Editing</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Video Editing</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Connect</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">WhatsApp</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Email</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Mostaql.com</a></li>
+                        <li><a href="https://wa.me/qr/42KIYM425DOYE1" class="text-gray-400 hover:text-white transition-colors">WhatsApp</a></li>
+                        <li><a href="mailto:JustMarwanFr@gmail.com" class="text-gray-400 hover:text-white transition-colors">Email</a></li>
+                        <li><a href="#https://mostaql.com/u/Marwan_PBL" class="text-gray-400 hover:text-white transition-colors">Mostaql.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -529,5 +577,41 @@
             offset: 100
         });
     </script>
+<script>
+    // Hide mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuButton = document.querySelector('button');
+        
+        if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+
+    // Hide mobile menu on scroll
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop) {
+            mobileMenu.classList.add('hidden');
+        }
+        lastScrollTop = scrollTop;
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.add('hidden');
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
 </body>
 </html>
